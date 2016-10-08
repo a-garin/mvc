@@ -3,11 +3,10 @@
 // правила проверяются сверху вниз. При соподени, примеяет первый
 return array(
 
-	// может содержатся от 1 цифры и больше (паттерн с регул. выражением)
-	// ЧПУ типа news/114
-	'news/([0-9]+)' => 'news/view/$1',
+	'product/([0-9]+)' => 'product/view/$1', // actionView в ProductController
 
+	'catalog' => 'catalog/index', // actionIndex в CatalogController
+	'category/([0-9]+)' => 'catalog/category/$1',  // actionCategory в CatalogController
 
-	'news' => 'news/index', // actionIndex in NewsController
-	'products' => 'product/list' // actionList in ProductController
+	'' => 'site/index', // actionIndex в SiteController
 );

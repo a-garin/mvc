@@ -18,6 +18,9 @@ class Db
 
         //if ($db->connect_errno) { die('Ошибка соединения: ' . $db->connect_error); }else{echo 'Connect true';}
         
+        //надо использовать кодировку
+        $db->exec("set names utf8");
+        
         return $db;
     }
     

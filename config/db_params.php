@@ -3,7 +3,7 @@
 //возвращаем массив с параметрами соединения
 return array(
     'host' => 'localhost',
-    'dbname' => 'php_base',
+    'dbname' => 'phpshop',
     'user' => 'root',
     'password' => ''
 );
