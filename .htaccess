@@ -2,4 +2,9 @@ AddDefaultCharset utf-8
 
 RewriteEngine on
 RewriteBase /
+
+# для того что бы style и изображдения работали
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
 RewriteRUle ^(.*)$ index.php
