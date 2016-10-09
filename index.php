@@ -7,12 +7,10 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // 2. Подключение файлов системы
-define('ROOT', dirname(__FILE__)); //полный путь к файл на диске
-require_once(ROOT.'/components/Router.php');
+define('ROOT', dirname(__FILE__)); //полный путь к файл на диске (определили константу)
 
-// 3. Установка соединения с БД
-// подключаем файл с подключением
-require_once(ROOT.'/components/Db.php');
+//Подключаем функцию autoload
+require_once(ROOT.'/components/Autoload.php');
 
 // 4. Вызор Router
 $router = new Router();
