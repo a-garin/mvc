@@ -38,7 +38,7 @@ class SiteController
             }
 
             if ($errors == false) {
-                $adminEmail = 'php.start@mail.ru';
+                $adminEmail = '';
                 $message = "Текст: {$userText}. От {$userEmail}";
                 $subject = 'Тема письма';
                 $result = mail($adminEmail, $subject, $message);
