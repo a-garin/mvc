@@ -1,6 +1,7 @@
 <?php
 
 // Из роутера передаем переменные контроллеру
+// Прим.: user/register. user- контроллер (класс). register- экшен (метод)
 // правила проверяются сверху вниз. При соподени, примеяет первый
 //Пере даем значения в метод action соотвесвующего класса
 return array(
@@ -17,6 +18,8 @@ return array(
 
 	'cabinet/edit' => 'cabinet/edit',
 	'cabinet' => 'cabinet/index',
+
+	'contacts' => 'site/contact',
 
 	'' => 'site/index', // actionIndex в SiteController
 );
