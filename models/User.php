@@ -97,6 +97,7 @@ class User
     
     /**
      * Проверяет имя: не меньше, чем 2 символа
+     *
      */
     public static function checkName($name) {
         if (strlen($name) >= 2) {
@@ -120,6 +121,16 @@ class User
      */
     public static function checkEmail($email) {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Проверяет телефон
+     */
+    public static function checkPhone($phone) {
+        if (strlen($phone) >= 6) {
             return true;
         }
         return false;
